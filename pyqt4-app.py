@@ -3,7 +3,7 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 #The fondamental for working with python
-import os,sys,signal
+import sys,signal
 
 from ui_mainWindow import Ui_MainWindow
 
