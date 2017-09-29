@@ -14,7 +14,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 from future_builtins import *
 
-import os
 import platform
 import stat
 import sys
