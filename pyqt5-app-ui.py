@@ -3,12 +3,11 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PyQt5 import uic
 # The fondamental for working with python
 import sys,signal
 
-from ui_mainWindow import Ui_MainWindow
-
-class MainWindow ( QMainWindow , Ui_MainWindow):
+class MainWindow ( QMainWindow):
     # Create settings for the software
     settings = QSettings('Your Name', 'Name of the software')
     settings.setFallbacksEnabled(False)
@@ -16,15 +15,14 @@ class MainWindow ( QMainWindow , Ui_MainWindow):
 
     def __init__ ( self, parent = None ):
         QMainWindow.__init__( self, parent )
-        # Load the ui generated with makepyqt5.sh
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi( self )
+        # Load the ui file
+        self.ui = uic.loadUi("mainwindow.ui", self)
         # Set the MainWindow Title
-        self.setWindowTitle('Name of the software - ' + self.version)
+        self.ui.setWindowTitle('Name of the software - ' + self.version)
         # When the software are closed on console the software are closed
         signal.signal(signal.SIGINT, signal.SIG_DFL)
         # Show the form
-        self.show()
+        self.ui.show()
 
 
 def main():
@@ -32,7 +30,6 @@ def main():
     app = QApplication(sys.argv)
     MainWindow_ = QMainWindow()
     ui = MainWindow()
-    ui.setupUi(MainWindow_)
     # Add the close feature at the program with the X
     sys.exit(app.exec_())
     
