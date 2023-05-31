@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 # The fondamental for working with python
-import sys,signal
+import sys, signal
 
 class MainWindow ( QMainWindow):
     # Create settings for the software
@@ -26,12 +26,14 @@ class MainWindow ( QMainWindow):
 
 
 def main():
-	# Start the software
+    # Start the software
     app = QApplication(sys.argv)
     MainWindow_ = QMainWindow()
     ui = MainWindow()
     # Add the close feature at the program with the X
     sys.exit(app.exec_())
-    
+
+
+
 # Execute the software
 main()
