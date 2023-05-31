@@ -1,7 +1,7 @@
 PyQt-Boilerplate
 ================
 
-Boilerplate to create PyQt5/PySide6 software.
+Boilerplate to create PyQt5/PySide6 software. Archived as today there are tons of articles and tutorial on how to start bouilding py qt applications compared when I started.
 
 Source to learn how to do it? Check [pythonguis.com](https://www.pythonguis.com/).
 
